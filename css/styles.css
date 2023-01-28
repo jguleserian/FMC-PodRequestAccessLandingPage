@@ -2,15 +2,17 @@
 
 :root {
     /*---colors---*/
-    --neon: #54E6AF;
-    --neon-light: #B3FFE2;
+    --black: #121725;
     --gray-light: #C2CBE5;
     --gray-medium: #5A668A;
     --gray-dark: #2C344B;
-    --black: #121725;
+    --neon: #54E6AF;
+    --neon-light: #B3FFE2;
+    --error: #FB3E3E;
     --white: #FFFFFF;
     /*---typography---*/
     font-family: "Chivo", sans-serif;
+    font-size: 62.5%;
 }
 
 html {
@@ -19,71 +21,346 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--gray-light);
     box-sizing: border-box;
+    font-family: "Chivo", sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 
-/*-----CONTAINERS-----*/
+/*-----CONTAINERS (html order)-----*/
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90rem;
+    width: 144rem;
+    background-color: var(--black);
+}
+
+section.main {
+    position: absolute;
+    height: 64rem;
+    width: 127.5rem;
+    right: 0;
+    margin: 13rem 0 13rem 0;
+}
+
+div.logo {
+    position: absolute;
+    left: 0;
+    top: -2.8rem;
+}
+
+div.background {
+    height: 64rem;
+    width: 127.5rem;
+    position: absolute;
+    right: 0;
+    object-fit: contain;
+    z-index: 0;
+}
+
+picture.background {
+    position: absolute;
+    right: 0;
+    mix-blend-mode: screen;
+}
+
+div.content {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 56.71%;
+    height: 79.53%;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+div.form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    width: 42.7rem;
+    height: 5.6rem;
+}
+
+div.input-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6.4rem;
+    width: 53.6rem;
+    height: 2.9rem;
+}
+
+div.graphic {
+    position: absolute;
+    right: 0;
+    bottom: -5.2rem;
+}
 
 
-/*-----CLASSES & IDS-----*/
+/*-----ELEMENTS (alpha order)-----*/
+
+h1.title {
+    margin-bottom: 0;
+    margin-top: 8.8rem;
+    font-weight: 100;
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+    color: var(--white);
+}
+
+span {
+    text-transform: uppercase;
+    display: block;
+}
+
+
+/*-----CLASSES & IDS (alpha order)-----*/
 
 
 /*---buttons---*/
 
 .button {
+    position: absolute;
     height: 4.6rem;
     width: 16.2rem;
+    margin-right: 5px;
+    border: none;
+    padding: 0;
     background-color: var(--neon);
     box-shadow: 0 2.5rem 2rem -2rem rgba(84, 238, 175, 0.2);
     border-radius: 2.5rem;
 }
 
-.button:active {
+.button:hover {
     background-color: var(--neon-light);
 }
 
 
 /*---form fields & labels---*/
 
-.form-field {
+input {
+    height: 5.6rem;
+    width: 42.7rem;
+    border: none;
     background-color: var(--gray-dark);
     border-radius: 2.8rem;
-    font-weight: 400;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: var(--white);
 }
 
-.form-field:active {
+input:hover,
+input:focus {
+    color: var(--white);
     font-weight: 900;
+}
+
+input::placeholder {
+    color: var(--gray-light);
+    padding-left: 3.2rem;
+}
+
+
+/*---icons---*/
+
+img.apple {
+    width: 7.8rem;
+}
+
+img.google {
+    width: 12.5rem;
+    height: 1.8rem;
+}
+
+img.pocket {
+    width: 12.9rem;
+}
+
+img.spotify {
+    width: 9.59rem;
 }
 
 
 /*---typography---*/
 
-.title {
-    font-weight: 400;
-    font-size: 5.2rem;
-    line-height: 6.2rem;
-}
-
 .body-text {
-    font-weight: 400;
+    font-weight: 100;
     font-size: 1.8rem;
     line-height: 2.8rem;
+    width: 44.5rem;
+    margin: 2.4rem 0 0 0;
+}
+
+.error-text {
+    color: var(--error);
+    font-size: 1.2rem;
+}
+
+.neon {
+    color: var(--neon)
 }
 
 
 /*-----MEDIA QUERIES-----*/
 
-@media only screen and (max-width:144rem) {
-    body {
-        background-color: var(--neon);
+@media only screen and (max-width:76.8rem) {
+    /*-----CONTAINERS (alpha)-----*/
+    main {
+        width: 76.8rem;
+        height: 102.4rem;
+        margin: 0 0 0 0;
+        align-items: flex-start;
+    }
+    section.main {
+        width: 76.8rem;
+        height: 102.4rem;
+        margin: 0 0 0 0;
+    }
+    div.logo {
+        top: 5rem;
+        left: 3.9rem;
+    }
+    div.background {
+        width: 49.1rem;
+        height: 76.7rem;
+    }
+    div.content {
+        height: 50.9rem;
+        width: 63.5rem;
+        bottom: unset;
+        margin: 25.8rem 9.4rem 0 3.9rem;
+    }
+    div.graphic {
+        right: unset;
+        bottom: 0;
+        left: 3rem;
+    }
+    /*-----ELEMENTS & CLASSES-----*/
+    h1.title {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        margin-top: 9.3rem;
+    }
+    .body-text {
+        margin-top: 3.1rem;
     }
 }
 
 @media only screen and (max-width:37.5rem) {
-    body {
-        background-color: var(--gray-medium);
+    main {
+        width: 37.5rem;
+        height: 66.7rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        /* z-index: 0; */
+    }
+    div.logo {
+        position: unset;
+        display: block;
+        top: unset;
+        left: unset;
+        margin-top: 6.2rem;
+    }
+    div.background {
+        width: inherit;
+        height: inherit;
+    }
+    picture.background {
+        background-color: var(--neon);
+        opacity: .2;
+        mix-blend-mode: multiply;
+    }
+    div.content {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: unset;
+        width: 32.7rem;
+        height: 39.8rem;
+        margin: 0 2.4rem 0 2.4rem;
+    }
+    div.icons {
+        position: absolute;
+        height: 3rem;
+        width: 31.5rem;
+        bottom: 24rem;
+        margin: 0;
+    }
+    div.form {
+        width: 32.7rem;
+        height: auto;
+        margin-top: 9.8rem;
+    }
+    div.input-group {
+        flex-direction: column;
+        justify-content: unset;
+    }
+    div.graphic {
+        display: none;
+    }
+    /*-----ELEMENTS & CLASSES-----*/
+    h1.title {
+        font-size: 2.6rem;
+        line-height: 3.8rem;
+        margin-top: 5.7rem;
+    }
+    .body-text {
+        width: 32.7rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin-top: 1.6rem;
+    }
+    .button {
+        position: unset;
+        display: block;
+        width: 32.7rem;
+        height: 4.6rem;
+        margin-top: 1.6rem;
+        margin-right: 0;
+    }
+    img.apple {
+        width: 4.5rem;
+    }
+    img.google {
+        width: 7.3rem;
+        height: 1.1rem;
+    }
+    img.pocket {
+        width: 7.7rem;
+    }
+    img.spotify {
+        width: 5.6rem;
+    }
+    input {
+        width: 32.7rem;
+        height: 4.6rem;
+        padding: 0;
     }
 }

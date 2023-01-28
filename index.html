@@ -9,12 +9,53 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    Publish your podcasts everywhere. Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more! Request access
+    <main>
+        <section class="main">
+            <div class="logo">
+                <img src="./assets/desktop/logo.svg" alt="pod logo">
+            </div>
+            <div class="background">
+                <picture class="background">
+                    <source media="(max-width:375px)" srcset="./assets/mobile/image-host.jpg">
+                    <source media="(max-width:768px)" srcset="./assets/tablet/image-host.jpg">
+                    <img src="./assets/desktop/image-host.jpg" alt="Man recording a Podcast">
+                </picture>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1 class="title">
+                        <span class="neon">Publish your podcasts</span><span>everywhere.</span>
+                    </h1>
+                    <p class="body-text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+                </div>
+                <div class="form">
+                    <form action="/index.js" method="post">
+                        <div class="input-group">
+                            <input class="form-field" type="email" name="email" id="email" placeholder="Email address">
+
+                            <button class="button" type="submit">Request access</button>
+                        </div>
+                        <p class="error-text"></p>
+                    </form>
+                </div>
+                <div class="icons">
+                    <img class="spotify" src="./assets/desktop/spotify.svg" alt="Spotify icon">
+                    <img class="apple" src="./assets/desktop/apple-podcast.svg" alt="Apple podcasts icon">
+                    <img class="google" src="./assets/desktop/google-podcasts.svg" alt="Google podcasts icon">
+                    <img class="pocket" src="./assets/desktop/pocket-casts.svg" alt="Pocket Casts icon">
+                </div>
+            </div>
+            <div class="graphic">
+                <img src="./assets/desktop/bg-pattern-dots.svg" alt="pattern of neon dots">
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="/index.js"></script>
 </body>
 
 </html>
