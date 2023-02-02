@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | Pod request access landing page</title>
-
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,13 +33,13 @@
                     <p class="body-text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
                 </div>
                 <div class="form">
-                    <form action="/index.js" method="post">
+                    <form id="formEntry" name="formEntry" method="post" action="" novalidate>
                         <div class="input-group">
-                            <input class="form-field" type="email" name="email" id="email" placeholder="Email address">
+                            <input class="form-field" type="email" name="email" placeholder="Email address" autofocus>
 
-                            <button class="button" type="submit">Request access</button>
+                            <input class="button" type="submit" value="Request access">
+                            <p class="error-text"></p>
                         </div>
-                        <p class="error-text"></p>
                     </form>
                 </div>
                 <div class="icons">
@@ -55,7 +54,8 @@
             </div>
         </section>
     </main>
-    <script type="text/javascript" src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>

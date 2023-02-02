@@ -38,9 +38,11 @@ main {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: left;
     height: 90rem;
-    width: 144rem;
+    width: 100vw;
     background-color: var(--black);
+    overflow: hidden;
 }
 
 section.main {
@@ -114,6 +116,17 @@ div.graphic {
     bottom: -5.2rem;
 }
 
+section.confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 70vw;
+    max-width: 53rem;
+    margin: 10vh 15vw 0 15vw;
+    padding: 0 4vw 10vw 4vw;
+    border: 1px solid var(--neon);
+}
+
 
 /*-----ELEMENTS (alpha order)-----*/
 
@@ -126,13 +139,24 @@ h1.title {
     color: var(--white);
 }
 
+
+/* p.error-text {
+    position: absolute;
+    left: 0;
+    top: 5.3rem;
+    color: var(--error);
+    font-size: 1.2rem;
+    line-height: 1.428rem;
+    padding-left: 3.2rem;
+} */
+
 span {
     text-transform: uppercase;
     display: block;
 }
 
 
-/*-----CLASSES & IDS (alpha order)-----*/
+/*-----CLASSES & IDS (alpha order & by category)-----*/
 
 
 /*---buttons---*/
@@ -153,10 +177,25 @@ span {
     background-color: var(--neon-light);
 }
 
+button {
+    width: calc(70vw - 8rem);
+    max-width: 45rem;
+    height: 4.6rem;
+    border: none;
+    margin-top: 1.6rem;
+    background-color: var(--neon);
+    box-shadow: 0 2.5rem 2rem -2rem rgba(84, 238, 175, 0.2);
+    border-radius: 2.5rem;
+}
+
+button:hover {
+    background-color: var(--neon-light);
+}
+
 
 /*---form fields & labels---*/
 
-input {
+input.form-field {
     height: 5.6rem;
     width: 42.7rem;
     border: none;
@@ -165,17 +204,17 @@ input {
     font-family: inherit;
     font-size: 1.4rem;
     color: var(--white);
+    padding-left: 3.2rem;
 }
 
-input:hover,
-input:focus {
+input.form-field:hover,
+input.form-field:focus {
     color: var(--white);
     font-weight: 900;
 }
 
-input::placeholder {
+input.form-field::placeholder {
     color: var(--gray-light);
-    padding-left: 3.2rem;
 }
 
 
@@ -212,6 +251,10 @@ img.spotify {
 .error-text {
     color: var(--error);
     font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 5.3rem;
+    padding-left: 3.2rem;
 }
 
 .neon {
@@ -224,7 +267,8 @@ img.spotify {
 @media only screen and (max-width:76.8rem) {
     /*-----CONTAINERS (alpha)-----*/
     main {
-        width: 76.8rem;
+        width: 100vw;
+        max-width: 76.8rem;
         height: 102.4rem;
         margin: 0 0 0 0;
         align-items: flex-start;
@@ -266,7 +310,7 @@ img.spotify {
 
 @media only screen and (max-width:37.5rem) {
     main {
-        width: 37.5rem;
+        width: 100vw;
         height: 66.7rem;
         flex-direction: column;
         align-items: center;
@@ -277,7 +321,6 @@ img.spotify {
         align-items: center;
         width: inherit;
         height: inherit;
-        /* z-index: 0; */
     }
     div.logo {
         position: unset;
@@ -318,9 +361,19 @@ img.spotify {
         height: auto;
         margin-top: 9.8rem;
     }
+    form {
+        width: 32.7rem;
+    }
     div.input-group {
         flex-direction: column;
         justify-content: unset;
+    }
+    input.form-field {
+        width: 32.7rem;
+        padding: 0;
+    }
+    input.form-field::placeholder {
+        padding-left: 3.2rem;
     }
     div.graphic {
         display: none;
@@ -358,9 +411,11 @@ img.spotify {
     img.spotify {
         width: 5.6rem;
     }
-    input {
+    input.form-field {
         width: 32.7rem;
         height: 4.6rem;
-        padding: 0;
+    }
+    p.error-text {
+        top: -3rem;
     }
 }
