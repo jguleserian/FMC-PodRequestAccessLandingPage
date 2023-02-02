@@ -42,7 +42,7 @@ However, as additional goals, I wanted to:
 ### Links
 
 - Solution URL: [GitHub Reporitory](https://github.com/jguleserian/FMC-PodRequestAccessLandingPage.git)
-- Live Site URL: [Add live site URL here](https://jguleserian.github.io/FMC-PodRequestAccessLandingPage/)
+- Live Site URL: [GitHub Pages](https://jguleserian.github.io/FMC-PodRequestAccessLandingPage/)
 
 ## My process
 
