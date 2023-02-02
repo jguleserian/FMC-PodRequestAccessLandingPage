@@ -40,7 +40,7 @@ main {
     align-items: center;
     justify-content: left;
     height: 90rem;
-    width: 100vw;
+    width: 144rem;
     background-color: var(--black);
     overflow: hidden;
 }
